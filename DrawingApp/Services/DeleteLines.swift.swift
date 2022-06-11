@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol DeleteLines: AnyObject {
+    func deleteAt(index: Int) 
+}

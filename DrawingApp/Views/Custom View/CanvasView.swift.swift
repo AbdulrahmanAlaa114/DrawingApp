@@ -57,17 +57,19 @@ class CanvasView: UIView {
     
     func undoDraw() {
         if lines.count > 0 {
-            deletedLines.append(lines.last!)
-            lines.removeLast()
-            
+            deletedLines.append(lines.removeLast())
             setNeedsDisplay()
         }
     }
     
+    func deleteSpecifiedLineWith(index: Int){
+        deletedLines.append(lines.remove(at: index))
+        setNeedsDisplay()
+    }
+    
     func redoDraw() {
         if deletedLines.count > 0 {
-            lines.append(deletedLines.last!)
-            deletedLines.removeLast()
+            lines.append(deletedLines.removeLast())
             setNeedsDisplay()
         }
     }
