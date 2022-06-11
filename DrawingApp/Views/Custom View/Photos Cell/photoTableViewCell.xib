@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="176" id="KGk-i7-Jjw" customClass="photoTableViewCell" customModule="DrawingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3AU-Hz-1Ir" customClass="CardView" customModule="DrawingApp" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="366" height="104"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MxL-nv-k9j">
+                                <rect key="frame" x="12" y="12" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2cE-pa-kal"/>
+                                    <constraint firstAttribute="width" constant="80" id="a4f-8X-qAt"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-Sk-3KB">
+                                <rect key="frame" x="314" y="12" width="40" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atb-ap-BMW">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="2YV-7h-BAf"/>
+                                            <constraint firstAttribute="height" constant="40" id="6b8-ua-rdO"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="" image="trash" catalog="system"/>
+                                        <connections>
+                                            <action selector="deleteButtonTapeed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1De-W0-Iym"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bho-Gq-bSP">
+                                        <rect key="frame" x="0.0" y="40" width="40" height="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="pencil.tip.crop.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="redrawButtonTapeed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dv4-uc-6z8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="A6B-Yq-fgx">
+                                <rect key="frame" x="104" y="12" width="205" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-MH-ovS">
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="37.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="creation time 15 : 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-2K-spt">
+                                        <rect key="frame" x="0.0" y="42.5" width="205" height="37.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="A6B-Yq-fgx" secondAttribute="bottom" constant="12" id="4Hc-ml-N1B"/>
+                            <constraint firstItem="MxL-nv-k9j" firstAttribute="top" secondItem="3AU-Hz-1Ir" secondAttribute="top" constant="12" id="569-U5-ctc"/>
+                            <constraint firstAttribute="trailing" secondItem="M2a-Sk-3KB" secondAttribute="trailing" constant="12" id="5Th-xP-Rzg"/>
+                            <constraint firstAttribute="bottom" secondItem="MxL-nv-k9j" secondAttribute="bottom" constant="12" id="H7d-QD-dc0"/>
+                            <constraint firstItem="A6B-Yq-fgx" firstAttribute="top" secondItem="3AU-Hz-1Ir" secondAttribute="top" constant="12" id="el1-5w-DdY"/>
+                            <constraint firstItem="M2a-Sk-3KB" firstAttribute="leading" secondItem="A6B-Yq-fgx" secondAttribute="trailing" constant="5" id="sRz-ag-UrB"/>
+                            <constraint firstAttribute="bottom" secondItem="M2a-Sk-3KB" secondAttribute="bottom" constant="12" id="vns-9c-xGA"/>
+                            <constraint firstItem="A6B-Yq-fgx" firstAttribute="leading" secondItem="MxL-nv-k9j" secondAttribute="trailing" constant="12" id="vrS-Ww-UqP"/>
+                            <constraint firstItem="M2a-Sk-3KB" firstAttribute="top" secondItem="3AU-Hz-1Ir" secondAttribute="top" constant="12" id="y2o-xg-gXP"/>
+                            <constraint firstItem="MxL-nv-k9j" firstAttribute="leading" secondItem="3AU-Hz-1Ir" secondAttribute="leading" constant="12" id="y8k-qW-7or"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="3AU-Hz-1Ir" secondAttribute="bottom" constant="10" id="6Gg-kb-YWg"/>
+                    <constraint firstItem="3AU-Hz-1Ir" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BCa-Or-f97"/>
+                    <constraint firstAttribute="trailing" secondItem="3AU-Hz-1Ir" secondAttribute="trailing" constant="10" id="Wpc-pX-bSz"/>
+                    <constraint firstItem="3AU-Hz-1Ir" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="x75-sS-NPk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="creationTime" destination="4wc-2K-spt" id="nfg-OE-hcp"/>
+                <outlet property="deleteBtn" destination="atb-ap-BMW" id="Y6N-YZ-Aye"/>
+                <outlet property="name" destination="ag6-MH-ovS" id="lRz-DU-xie"/>
+                <outlet property="photo" destination="MxL-nv-k9j" id="Hhe-al-Ve7"/>
+                <outlet property="redrawBtn" destination="Bho-Gq-bSP" id="ESb-KR-R2k"/>
+            </connections>
+            <point key="canvasLocation" x="-82.608695652173921" y="157.36607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pencil.tip.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
